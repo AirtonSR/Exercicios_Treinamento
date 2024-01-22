@@ -1,9 +1,11 @@
 package Aula03;
 
-import java.util.Scanner;
-
 public class OperacoesMatematicas {
-    public double soma(double n1, double n2){
-        return n1 + n2;
+    public String soma(int n1, int n2){
+        double soma = n1 + n2;
+        double produto = n1 * n2;
+        String resultado = String.format("soma: %.2f\nproduto: %.2f", soma, produto);
+        return resultado;
     }
+
 }
