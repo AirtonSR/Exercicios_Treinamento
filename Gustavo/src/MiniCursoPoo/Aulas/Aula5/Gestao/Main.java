@@ -18,8 +18,5 @@ public class Main {
         //Adicionando jose no departamento subordinados
 
         Departamento gerencia = new Departamento("Gerencia");
-
-        System.out.println(subordinados.toString());
     }
-
 }
