@@ -20,6 +20,5 @@ public class Main {
         System.out.println("------- Calculadora -------");
         calcSoma.calcularSoma(2, 10);
         System.out.println(calcSoma.toString());
-
     }
 }

@@ -1,5 +1,7 @@
 package Aula4;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class Avo {
     private String cpf;
     private String sobrenome;
@@ -7,7 +9,6 @@ public class Avo {
         this.sobrenome = sobrenome;
         this.cpf = cpf;
     }
-
     public String getSobrenome() {
         return sobrenome;
     }
