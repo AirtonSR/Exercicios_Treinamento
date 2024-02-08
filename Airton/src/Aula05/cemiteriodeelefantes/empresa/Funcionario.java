@@ -1,4 +1,4 @@
-package org.example.lesson_05.cemiteriodeelefantes.empresa;
+package Aula05.cemiteriodeelefantes.empresa;
 
 public class Funcionario {
     public String nome;

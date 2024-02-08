@@ -1,4 +1,4 @@
-package org.example.lesson_05.cemiteriodeelefantes.empresa;
+package Aula05.cemiteriodeelefantes.empresa;
 
 public class Assistente extends Funcionario {
     private String data_de_admissao;
