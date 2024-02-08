@@ -25,15 +25,15 @@ public class Financeiro implements Calcular {
                 }
                 break;
             case DBA:
-                System.out.println("Salario Bruto é: " + calcularSalario());
+                System.out.println("Salario Bruto é: " + calcularSalarioBruto());
                 break;
             case TESTER:
-                System.out.println("Salario Bruto é: " + calcularSalario());
+                System.out.println("Salario Bruto é: " + calcularSalarioBruto());
                 break;
 
         }
     }
-    private double calcularSalario() {
+    private double calcularSalarioBruto() {
         if (salario > 3000) {
             double porcentagem = (salario * 15) / 100;
             salarioBruto = salario - porcentagem;
