@@ -1,4 +1,4 @@
-package org.example.lesson_05.cemiteriodeelefantes.gestao;
+package Aula05.cemiteriodeelefantes.gestao;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.example.lesson_05.cemiteriodeelefantes.banco;
+package Aula05.cemiteriodeelefantes.banco;
 
 public class ContaBancaria {
     public int numeroConta;
