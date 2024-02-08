@@ -1,4 +1,4 @@
-package org.example.lesson_05.polimorfismo;
+package Aula05.polimorfismo;
 
 public class Quadrado extends Forma {
     private double lado;
