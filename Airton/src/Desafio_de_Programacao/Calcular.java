@@ -7,5 +7,5 @@ public interface Calcular {
         DBA,
         TESTER;
     }
-    public void CalcularSalario(cargo cargo);
+    public void calcularSalario(cargo cargo);
 }

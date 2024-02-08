@@ -11,7 +11,7 @@ public class Financeiro implements Calcular {
 
     }
     @Override
-    public void CalcularSalario(Calcular.cargo cargo) {
+    public void calcularSalario(Calcular.cargo cargo) {
         switch (cargo) {
             case DEV:
                 if (salario > 3000) {
@@ -25,15 +25,15 @@ public class Financeiro implements Calcular {
                 }
                 break;
             case DBA:
-                System.out.println("Salario Bruto é: " + CalcularSalario());
+                System.out.println("Salario Bruto é: " + calcularSalario());
                 break;
             case TESTER:
-                System.out.println("Salario Bruto é: " + CalcularSalario());
+                System.out.println("Salario Bruto é: " + calcularSalario());
                 break;
 
         }
     }
-    private double CalcularSalario() {
+    private double calcularSalario() {
         if (salario > 3000) {
             double porcentagem = (salario * 15) / 100;
             salarioBruto = salario - porcentagem;
