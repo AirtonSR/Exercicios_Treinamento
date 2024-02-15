@@ -1,7 +1,7 @@
 package Aula05.cemiteriodeelefantes.banco;
 
 public class ContaBancaria {
-    public int numeroConta;
+    private int numeroConta;
     private double saldo;
 
     public ContaBancaria(int numeroConta) {

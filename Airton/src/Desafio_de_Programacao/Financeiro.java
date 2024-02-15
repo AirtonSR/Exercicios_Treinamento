@@ -1,46 +1,37 @@
 package Desafio_de_Programacao;
 
-public class Financeiro implements Calcular {
-    private String nome;
-    private double salario;
+public class Financeiro implements implementacoes{
+    public String nome;
+    private double salarioLiquido;
     private double salarioBruto;
-
-    public Financeiro(String nome, double salario) {
+    public Financeiro(String nome, double salarioBruto) {
         this.nome = nome;
-        this.salario = salario;
-
+        this.salarioBruto = salarioBruto;
     }
     @Override
-    public void calcularSalario(Calcular.cargo cargo) {
-        switch (cargo) {
+    public void calcularSalario(cargo cargo) {
+        switch (cargo){
             case DEV:
-                if (salario > 3000) {
-                    double porcentagem = (salario * 10) / 100;
-                    salarioBruto = salario - porcentagem;
-                    System.out.println("Salario Bruto é: " + salarioBruto);
-                } else if (salario <= 3000) {
-                    double porcentagem = (salario * 20) / 100;
-                    salarioBruto = salario - porcentagem;
-                    System.out.println("Salario Bruto é: " + salarioBruto);
+                if(salarioBruto > 3000){
+                    salarioLiquido = salarioBruto - ((salarioBruto * 10) / 100);
+                    break;
+                } else if (salarioBruto <= 3000) {
+                    salarioLiquido = salarioBruto - ((salarioBruto * 15) / 100);
+                    break;
                 }
-                break;
-            case DBA:
-                System.out.println("Salario Bruto é: " + calcularSalarioBruto());
-                break;
             case TESTER:
-                System.out.println("Salario Bruto é: " + calcularSalarioBruto());
+            case DBA:
+                calcularPorcentagem();
                 break;
-
         }
+        System.out.printf("Seu salario é: %.2f R$", salarioLiquido);
     }
-    private double calcularSalarioBruto() {
-        if (salario > 3000) {
-            double porcentagem = (salario * 15) / 100;
-            salarioBruto = salario - porcentagem;
-        } else if (salario <= 3000) {
-            double porcentagem = (salario * 20) / 100;
-            salarioBruto = salario - porcentagem;
+    private double calcularPorcentagem(){
+        if(salarioBruto > 3000){
+            salarioLiquido = salarioBruto - ((salarioBruto * 15) / 100);
+        } else if (salarioBruto <= 3000) {
+            salarioLiquido = salarioBruto - ((salarioBruto * 20) / 100);
         }
-        return salarioBruto;
+        return salarioLiquido;
     }
 }
