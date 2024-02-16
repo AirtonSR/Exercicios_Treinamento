@@ -1,9 +1,6 @@
 package Aula5.cemiteriodeelefantes.gestao;
-
 import java.util.List;
-
 public class Main {
-
     public static void main(String[] args) {
         Gerente gerente = new Gerente("Jane", "65876846836", 5000);
 
@@ -21,7 +18,5 @@ public class Main {
 
         Departamento departamento2 = new Departamento("RH", gerente);
         departamento2.adicionarEmpregado(empregado3);
-
-
     }
 }

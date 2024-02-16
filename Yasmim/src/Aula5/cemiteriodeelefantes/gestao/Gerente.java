@@ -12,10 +12,12 @@ public class Gerente extends Empregado {
     }
 
     public void adicionarSubordinado(Empregado empregado) {
+
         subordinados.add(empregado);
     }
 
     public void removerSubordinado(Empregado empregado) {
+
         subordinados.remove(empregado);
     }
 }
