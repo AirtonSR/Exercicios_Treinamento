@@ -1,22 +1,30 @@
 package Aula5.Gestao;
 
-public class Main {
-    public void main(String[] args) {
-        Gerente claudio = new Gerente("claudio", "1230", 1000);
-        //Crinando gerente
+public class main {
+    public static void main(String[] args) {
+    //--------------------------------------------------------------------
+    //CRIANDO DEPARTAMENTO E GERENTE A PARTIR DO CLASSE
+    Departamento gerencia = new Departamento("Gerencia");
+    Gerente gerente = new Gerente("Paulo", "123.456.789-00", 5000, gerencia);
 
-        Empregado jose = new Empregado("aaaaa", "0321", 500);
-        //Criando empregado
+    //--------------------------------------------------------------------
+    //CRIANDO EMPREGADO E ADICIONANDO NO DEPARTAMENTO DE GERENCIA.
+    Empregado empregado = new Empregado("Joao", "123.456.789-00", 5000);
+    gerencia.adicionarEmpregado(empregado);
 
-        claudio.adicionarSubordinado(jose);
-        //Adicionando empregado(jose) como subordinado do gerente(claudio)
+    //--------------------------------------------------------------------
+    //CRINADO DEPARTAMENTO FUNCIONARIO E ADICIONANDO FUNCIONARIOS
+    Departamento funcionario = new Departamento("funcionarios");
 
-        Departamento subordinados = new Departamento("Subordinados");
-        //Criando departamento subordinados
+    //--------------------------------------------------------------------
+    // CRIANDO EMPREGADOS E ADICIONANDO EMPREGADOS NO DEPARTAMENTO FUNCIONARIOS
+    Empregado empregado1 = new Empregado("Maria", "987.654.321-00", 1200);
+    funcionario.adicionarEmpregado(empregado1);
 
-        subordinados.adicionarEmpregado(jose);
-        //Adicionando jose no departamento subordinados
-
-        Departamento gerencia = new Departamento("Gerencia");
+    //--------------------------------------------------------------------
+    //TO STRING DOS OBJETOS CRIADOS.
+    System.out.println(gerencia);
+    System.out.println(funcionario);
+    System.out.println(gerente);
     }
 }
