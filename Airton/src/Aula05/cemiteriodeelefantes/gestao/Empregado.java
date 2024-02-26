@@ -1,42 +1,33 @@
 package Aula05.cemiteriodeelefantes.gestao;
-
-import java.util.List;
-
-public class Empregado{
-    public String nome;
+public class Empregado {
+    private String nome;
     private String cpf;
-    private Gerente gerente;
     private double salario;
-    private List<Empregado> empregados;
-    public String departamentos;
     private boolean estaDeFerias;
+    private String departamento;
+    private Departamento depar;
 
-    public Empregado(String nome, String cpf, double salario, String departamento){
+    public Empregado(String nome, String cpf, double salario) {
         this.nome = nome;
         this.cpf = cpf;
         this.salario = salario;
-        this.departamentos = departamento;
         this.estaDeFerias = false;
     }
-    public void mudarDepartamento(String novoDepartamento) {
-        this.nome = novoDepartamento;
+    public void calcularBonus() {
     }
-    public void calcularBonus(double salario) {
-        salario  = salario * 1.1;
-        System.out.printf("Salario com bonus: %.2f\n", salario);
+    public void mudarDepartamento(String novoDepartamento) {
+        Departamento.nome = novoDepartamento;
     }
     public void iniciarFerias() {
         this.estaDeFerias = true;
     }
-
-    @Override
-    public String toString() {
-        return "Empregado{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", salario=" + salario +
-                ", departamentos='" + departamentos + '\'' +
-                ", estaDeFerias=" + estaDeFerias +
-                '}';
+    public void terminarFerias() {
+        this.estaDeFerias = false;
+    }
+    public void detalhes(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Salario: " + this.salario);
+        System.out.println("Departamento: " + Departamento.nome);
     }
 }
