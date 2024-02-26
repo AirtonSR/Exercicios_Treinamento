@@ -1,32 +1,45 @@
 package Aula5.cemiteriodeelefantes.gestao;
-
-public class Empregado {
+class Empregado implements Funcionario {
     private String nome;
     private String cpf;
     private double salario;
-    private boolean estaDeFerias;
     private String departamento;
+    private boolean estaDeFerias;
 
-    public Empregado(String nome, String cpf, double salario) {
+    public Empregado(String nome, String cpf, double salario, String departamento) {
         this.nome = nome;
         this.cpf = cpf;
         this.salario = salario;
+        this.departamento = departamento;
         this.estaDeFerias = false;
     }
 
-    public void calcularBonus() {
-
-        System.out.println("Calcular bonus para o empregado " + nome);
+    public String getNome() {
+        return nome;
     }
 
     public void mudarDepartamento(String novoDepartamento) {
         this.departamento = novoDepartamento;
-        System.out.println("O empregado " + nome + " mudou de departamento para " + novoDepartamento);
     }
 
     public void iniciarFerias() {
         this.estaDeFerias = true;
-        System.out.println("O empregado " + nome + " começou as ferias");
     }
 
+    @Override
+    public void calcularBonus() {
+        salario *= 1.1;
+        System.out.printf("Salario mais bonus: %.2f\n", salario);
+    }
+
+    @Override
+    public String toString() {
+        return "Empregado: " +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", salario=" + salario +
+                ", departamento='" + departamento + '\'' +
+                ", estaDeFerias=" + estaDeFerias +
+                '.';
+    }
 }

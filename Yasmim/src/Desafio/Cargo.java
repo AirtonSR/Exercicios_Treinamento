@@ -1,7 +1,5 @@
 package Desafio;
 
-public enum Cargo {
-    DEV,
-    DBA,
-    TESTER;
+public interface Cargo {
+    double calculaSalarioLiquido(double salarioBruto);
 }

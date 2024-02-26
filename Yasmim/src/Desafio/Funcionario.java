@@ -4,28 +4,21 @@ public class Funcionario {
     private Cargo cargo;
     private double salarioBruto;
 
-    public Funcionario(String nome, Cargo cargo, double salarioBruto){
+    public Funcionario(String nome, Cargo cargo, double salarioBruto) {
         this.nome = nome;
         this.cargo = cargo;
         this.salarioBruto = salarioBruto;
     }
-    public double calcularSalarioLiquido() {
-        double desconto;
-
-        if (cargo == Cargo.DEV) {
-            desconto = (salarioBruto > 3000) ? salarioBruto * 0.1 : salarioBruto * 0.2;
-        } else {
-            desconto = (salarioBruto > 3000) ? salarioBruto * 0.15 : salarioBruto * 0.2;
-        }
-
-        return salarioBruto - desconto;
+    public double calcularSalarioLiquido(){
+        return cargo.calculaSalarioLiquido(salarioBruto);
     }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    @Override
+    public String toString() {
+        return "Funcionario" +
+                "nome='" + nome + '\'' +
+                ", cargo=" + cargo +
+                ", salarioBruto=" + salarioBruto +
+                ", Salario Liquido: " + calcularSalarioLiquido() +
+                ".";
     }
 }

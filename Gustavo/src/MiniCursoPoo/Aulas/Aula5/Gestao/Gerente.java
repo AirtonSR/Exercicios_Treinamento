@@ -1,29 +1,31 @@
 package Aula5.Gestao;
+public class Gerente implements Gestao{
+    //----------------------------------------------------------
+    //CONSTRUTOR
+    private String nome;
+    private String cpf;
+    private double salario;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Gerente extends Empregado {
-    private List<Empregado> subordinados;
-
-
-    public Gerente(String nome, String cpf, double salario) {
-        super(nome, cpf, salario);
-        this.subordinados = new ArrayList<>();
+    public Gerente(String nome, String cpf, double salario, Departamento departamento) {
+    this.nome = nome;
+    this.cpf = cpf;
+    this.salario = salario;
     }
-
-    public void adicionarSubordinado(Empregado empregado) {
-        subordinados.add(empregado);
+    //----------------------------------------------------------
+    //METODOS
+    @Override
+    public void adicionarEmpregado(Empregado empregado) {
     }
-
-    public void removerSubordinado(Empregado empregado) {
-        subordinados.remove(empregado);
+    @Override
+    public void removerEmpregado(Empregado empregado) {
     }
 
     @Override
     public String toString() {
-        return "Gerente{" +
-                "subordinados=" + subordinados +
-                '}';
+        return "--- Gerente --- " + '\n' +
+                "Nome: " + nome + '\n' +
+                "CPF: " + cpf + '\n' +
+                "Salario: " + salario +
+                ' ';
     }
 }
